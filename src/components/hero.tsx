@@ -1,5 +1,4 @@
 import { buttonVariants } from "@/lib/button-variants";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 import { Download, Linkedin, Mail, MapPin } from "lucide-react";
 
@@ -72,6 +71,16 @@ export function Hero() {
               className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
             >
               Get in Touch
+            </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
+            >
+              <Download className="mr-2 h-4 w-4" />
+              Resume
             </a>
           </div>
 

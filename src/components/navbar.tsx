@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { label: "Experience", href: "/#experience" },
   { label: "Projects", href: "/#projects" },
   { label: "Contact", href: "/#contact" },
+  { label: "Resume", href: "/resume.pdf" },
 ] as const;
 
 export function Navbar() {
@@ -27,6 +28,8 @@ export function Navbar() {
             <a
               key={href}
               href={href}
+              target={href === "/resume.pdf" ? "_blank" : undefined}
+              rel={href === "/resume.pdf" ? "noopener noreferrer" : undefined}
               className="rounded-lg px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
             >
               {label}
@@ -62,6 +65,8 @@ export function Navbar() {
                 <a
                   key={href}
                   href={href}
+                  target={href === "/resume.pdf" ? "_blank" : undefined}
+                  rel={href === "/resume.pdf" ? "noopener noreferrer" : undefined}
                   className="rounded-lg px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground"
                 >
                   {label}
